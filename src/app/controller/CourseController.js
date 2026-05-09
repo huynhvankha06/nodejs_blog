@@ -10,6 +10,23 @@ class CourseController {
             })
             .catch(next);
     }
+    //GET /course/create
+    create(req, res, next) {
+        res.render('course/create');
+    }
+    //POST /course/store
+    store(req, res, next) {
+        const formData = req.body;
+        formData.image = `https://i.ytimg.com/vi/${req.body.videoID}/hqdefault.jpg`;
+        const course = new Course(formData);
+        course
+            .save()
+            .then(() => res.redirect('/'))
+            .catch((error) => {
+                console.log(error); // 👈 bắt buộc
+                res.status(500).send('Lỗi: ' + error.message);
+            });
+    }
 }
 
 module.exports = new CourseController();
