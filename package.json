@@ -1,45 +1,46 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [
-    "f8",
-    "blog",
-    "f8",
-    "nodejs",
-    "nodejs"
-  ],
-  "homepage": "https://github.com/huynhvankha06/nodejs_blog#readme",
-  "bugs": {
-    "url": "https://github.com/huynhvankha06/nodejs_blog/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/huynhvankha06/nodejs_blog.git"
-  },
-  "license": "ISC",
-  "author": "khahv",
-  "type": "commonjs",
-  "main": "src/index.js",
-  "scripts": {
-    "prepare": "husky",
-    "watch": "sass --watch src/resources/scss/app.scss  src/public/css/app.css",
-    "start": "nodemon --inspect src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
-  },
-  "dependencies": {
-    "express": "^5.2.1",
-    "express-handlebars": "^9.0.1"
-  },
-  "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
-    "morgan": "^1.10.1",
-    "nodemon": "^3.1.14",
-    "prettier": "^3.8.3",
-    "sass": "^1.99.0"
-  }
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        "f8",
+        "blog",
+        "f8",
+        "nodejs",
+        "nodejs"
+    ],
+    "homepage": "https://github.com/huynhvankha06/nodejs_blog#readme",
+    "bugs": {
+        "url": "https://github.com/huynhvankha06/nodejs_blog/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/huynhvankha06/nodejs_blog.git"
+    },
+    "license": "ISC",
+    "author": "khahv",
+    "type": "commonjs",
+    "main": "src/index.js",
+    "scripts": {
+        "prepare": "husky",
+        "watch": "sass --watch src/resources/scss/app.scss  src/public/css/app.css",
+        "start": "nodemon --inspect src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "lint-staged": {
+        "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "express-handlebars": "^9.0.1",
+        "mongoose": "^9.6.1"
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^16.4.0",
+        "morgan": "^1.10.1",
+        "nodemon": "^3.1.14",
+        "prettier": "^3.8.3",
+        "sass": "^1.99.0"
+    }
 }
