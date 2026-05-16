@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
+const methodOverride = require('method-override');
 const app = express();
 const port = 3000;
 
@@ -16,6 +17,7 @@ app.use(
     }),
 );
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 // HTTP logger
@@ -27,6 +29,9 @@ app.engine(
     handlebars.engine({
         extname: '.hbs',
         partialsDir: path.join(__dirname, 'resources', 'views', 'partials'),
+        helpers: {
+            sum: (a, b) => a + b,
+        },
     }),
 );
 app.set('view engine', 'hbs');
